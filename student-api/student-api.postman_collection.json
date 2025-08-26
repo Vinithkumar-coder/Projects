@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "Student API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List Students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:8080/students", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["students"] }
+      }
+    },
+    {
+      "name": "Get Student by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:8080/students/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["students","1"] }
+      }
+    },
+    {
+      "name": "Create Student",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Alice Johnson\",\n  \"email\": \"alice.johnson@example.com\",\n  \"course\": \"Physics\",\n  \"age\": 23\n}"
+        },
+        "url": { "raw": "http://localhost:8080/students", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["students"] }
+      }
+    },
+    {
+      "name": "Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Alice J.\",\n  \"email\": \"alice.johnson@example.com\",\n  \"course\": \"Astrophysics\",\n  \"age\": 24\n}"
+        },
+        "url": { "raw": "http://localhost:8080/students/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["students","1"] }
+      }
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": { "raw": "http://localhost:8080/students/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["students","1"] }
+      }
+    }
+  ]
+}
